@@ -1,0 +1,14 @@
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.csprojAssemblyReference.cache
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\Views\AdvancedCalculation.xaml.g.cs
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\Views\StandardCalculation.xaml.g.cs
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.csproj.CoreCompileInputs.cache
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.AssemblyInfoInputs.cache
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.AssemblyInfo.cs
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.dll
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\sample.pdb
+C:\Users\Andrei\Documents\sample\sample\sample\bin\Debug\netstandard2.0\sample.deps.json
+C:\Users\Andrei\Documents\sample\sample\sample\bin\Debug\netstandard2.0\sample.dll
+C:\Users\Andrei\Documents\sample\sample\sample\bin\Debug\netstandard2.0\sample.pdb
+C:\Users\Andrei\Documents\sample\sample\sample\obj\Debug\netstandard2.0\XamlC.stamp

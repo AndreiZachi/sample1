@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:sample.ViewModel"
+             mc:Ignorable="d"
+             x:Class="sample.MainPage"             
+             >
+    <NavigationPage.TitleIconImageSource>
+        <FileImageSource File="ic_launcher.png" />
+    </NavigationPage.TitleIconImageSource>
+    <NavigationPage.HasBackButton/>
+    <ContentPage.BindingContext>
+        <viewmodel:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+        <Grid x:Name="Grd" Padding="30,80,30, 10" ColumnSpacing="30" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Vertical" Grid.Row="0"  HorizontalOptions="EndAndExpand" >
+                <Image x:Name="StandardBtn"  Source="standard.jpg" HorizontalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding StandardCalcCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Standard Calculator" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="1">
+                <Image x:Name="AdvanceBtn"  Source="advanced.jpg"  HorizontalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding AdvancedCalcCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Advanced Calculator" HorizontalOptions="Center"/>
+            </StackLayout>
+
+
+            <CarouselView                 
+                Grid.Row="2"
+                Grid.ColumnSpan="2" 
+                x:Name="carousel"
+                PeekAreaInsets="50"               
+                    >
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#2b2727" BorderColor="Gray" Margin="8" HasShadow="True" VerticalOptions="CenterAndExpand">
+                            <Image  Source="{Binding Img}" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.ImageTapped, Source={x:Reference Name=carousel}}" CommandParameter="{Binding Link}" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
